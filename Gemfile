@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -69,3 +71,9 @@ gem 'bcrypt',         '3.1.12'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 gem 'rails-ujs', '~> 0.1.0'
+gem 'faker', github: 'stympy/faker'
+
+group :production do
+  gem 'pg',  '0.20.0'
+  gem 'fog', '1.42'
+end
